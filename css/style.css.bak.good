@@ -1,0 +1,147 @@
+/* Add some margin to the page and set a default font and colour */
+.hidden {visibility:hidden;}
+
+.red  {color: red;}
+
+body {
+  margin: 30px auto 10px auto;
+  font-family: "Georgia", serif;
+  line-height: 1.3em;
+  color: #333;
+}
+
+.slotsTable {
+  float: left;
+  padding: 10px 30px 10px 10px;
+  min-height: 500px;
+  width: 400px;
+  border: 2px solid #333;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  -moz-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+  -webkit-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+  box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+  margin-right: 20px;
+}
+
+
+.functionPanel {
+	float: left;
+	width: 180px;
+  min-height: 480px;
+  height: 480px;
+	text-align:center;
+    padding: 20px 2%;
+    margin-left: 20px;
+    border: 2px solid #333;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    -moz-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+    -webkit-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+    box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+
+}
+/* Slots for final card positions */
+
+
+.slot {
+  text-align: center;
+  width: 58px;
+  height: 120px;
+  background: #fff;
+  border: 2px dashed #333;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  margin: 8px 8px;
+  padding: 0px 10px;
+}
+
+/* The initial pile of unsorted cards */
+
+.cardPile {
+  height: 100px;
+  width:  100px;
+  padding-bottom: 10px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+/* Individual cards and slots */
+
+.cardPile div {
+  width: 58px;
+  height: 80px;
+  border: 2px solid #333;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  margin: 10px 0 0 10px;
+  position: absolute;
+  padding: 30px 10px 10px 10px;
+  color: #fff;
+  font-size: 60px;
+  text-shadow: 0 0 3px #000;
+}
+
+.cardTable  {
+ padding: 10px 10px;
+}
+
+
+.slot.hovered {
+  background: #aaa;
+}
+
+
+.cardPile div.ui-draggable-dragging {
+  -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+  -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+  box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+  border: 2px solid #333;
+}
+
+
+
+/* "You did it!" message */
+.successMessage {
+  display: block;
+  width: 0;
+  height: 0;
+  z-index: 100;
+  background: lightgrey;
+  border: 2px solid #333;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  -moz-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+  -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+  box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+  padding: 20px;
+}
+
+/* UI style */
+
+#slider-range {
+  width: 90%;
+  margin-left: auto ;
+  margin-right: 10px;
+}
+.resetButton {
+  width: 60%;
+  height: 25%;
+  margin: 1% auto;
+  font-size: 1em;
+  font-family: "Georgia", serif;
+}
+.functionPanel ul {
+  list-style-type:none;
+  padding: 2%;
+}
+
+.functionPanel li {
+  padding: 2.5%;
+}

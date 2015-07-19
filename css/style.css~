@@ -1,0 +1,223 @@
+/* Add some margin to the page and set a default font and colour */
+
+
+.hidden {visibility:hidden;}
+
+.red  {color: red;}
+
+body {
+  margin: 30px 0px 10px 0px;
+  font-family: "Arial", serif;
+  color: #333;
+  overflow:hidden;
+}
+
+.slotsTable {
+  float: left;
+  border: 2px solid #333;
+  border-radius: 10px;
+  box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+  margin-right: 0.2em;
+  position: relative;
+  overflow: hidden;
+}
+
+.cardTable { 
+  text-align: center;
+  position: absolute;
+  padding: 0.25em 0.25em;
+}
+
+.functionPanel {
+	float: left;
+	text-align:center;
+  padding: 10px 0 30px 0;
+  margin-left: .2em;
+  border: 2px solid #333;
+  border-radius: 10px;
+  box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+}
+/* Slots for final card positions */
+
+.slot {
+  background: #fff;
+  border: 2px dashed #333;
+  border-radius: 10px;
+  margin: .2em .3em;
+  padding: 6px 8px 6px 8px;
+  position: relative;
+  width: auto;
+}
+
+/* The initial pile of unsorted cards */
+
+.cardPile {
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+}
+
+
+/* Individual cards and slots */
+
+.cardPile div {
+  width: inherit;
+  height: inherit;
+  text-align: center;
+  border: 2px solid #333;
+  border-radius: 10px;
+  position: absolute;
+  color: #fff;
+  margin-top: .2em;
+  font-size: 3em;
+  text-shadow: 0 0 3px #000;
+}
+
+
+
+.slot.hovered {
+  background: #aaa;
+}
+
+
+.cardPile div.ui-draggable-dragging {
+  box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+  border: 2px solid #333;
+}
+
+
+
+/* "You did it!" message */
+.successMessage {
+  display: block;
+  width: 0;
+  height: 0;
+  z-index: 100;
+  background: lightgrey;
+  border: 2px solid #333;
+  border-radius: 10px;
+  box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+  padding: 10px;
+}
+
+/* UI style */
+
+#slider-range {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.resetButton {
+  display: inline;
+  width: 5em;
+  height: 1.8em;
+  font-size: 1.2em;
+  text-align: center;
+  vertical-align: middle;
+}
+.functionPanel ul {
+  list-style-type:none;
+  padding: 0.2em;
+}
+
+.functionPanel li {
+  padding: 0.1em;
+}
+
+/* Media settings -------------*/
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (min-width : 320px)
+and (max-width : 480px) {
+/* Your Styles */
+ body {
+    //font-size: 0.75em;
+    background-color: green;
+    zoom: 0.75;
+ }
+ .gameContainer {
+   margin-left: 8px;   
+ }
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen
+and (min-width : 321px) {
+/* Your Styles */
+ 
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen
+and (max-width : 320px) {
+/* Your Styles */
+ body {
+   //font-size: 0.625em;
+   background-color: pink;
+   zoom: 0.625;
+   
+ }
+ .gameContainer {
+   margin-left: 3px;   
+ }
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
+/* Your Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+/* Your Styles */
+ body{
+    background-color: red;
+    zoom: 0.9;
+ }
+ .gameContainer {
+   margin-left: 20px;   
+ }
+}
+
+/* iPads (portrait) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+/* Your Styles */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen
+and (min-width : 1224px) {
+/* Your Styles */
+.gameContainer {
+   margin-left: 20px;   
+ }
+}
+
+/* Large screens ----------- */
+@media only screen
+and (min-width : 1824px) {
+/* Your Styles */
+.gameContainer {
+   margin-left: 30px;   
+ }
+}
+
+/* iPhone 4 ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+/* Your Styles */
+ 
+}
+/*Posted by Michael MacNaughton on Monday, March 12, 2012 in HTML5 (4) at
+ http://www.texaswebdevelopers.com/blog/template_permalink.asp?id=145 */
+

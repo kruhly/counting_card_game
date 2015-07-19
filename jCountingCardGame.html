@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!-- saved from url=(0131)http://www.elated.com/res/File/articles/development/javascript/jquery/drag-and-drop-with-jquery-your-essential-guide/card-game.html Images added (use picts array instead of words array) and #cardPile div padding modified  by Robert J. Kruhlak
+-->
+<html lang="en"><head><meta charset="UTF-8">
+
+<title>A Counting Card Game</title>
+<!-- The below script Makes IE understand the new html5 tags are there and applies the CSS to it -->
+<!--[if IE]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/> <!-- css for the sliders -->
+<link rel="stylesheet" type="text/css" href="./css/style.css">
+<script  src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+
+<script src="jquery.CountingCardGame.js" ></script>
+<script>
+function touchHandler(event) {
+    var touch = event.changedTouches[0];
+
+    
+    var $target = $(event.target);  
+    if( $target.hasClass('correct') ) {correct = 1;}
+    else{  
+         var simulatedEvent = document.createEvent("MouseEvent");
+        simulatedEvent.initMouseEvent({
+        touchstart: "mousedown",
+        touchmove: "mousemove",
+        touchend: "mouseup"
+    }[event.type], true, true, window, 1,
+        touch.screenX, touch.screenY,
+        touch.clientX, touch.clientY, false,
+        false, false, false, 0, null);
+
+    touch.target.dispatchEvent(simulatedEvent);   
+         event.preventDefault();  
+    }
+}
+
+function initTouch() {
+    document.addEventListener("touchstart", touchHandler, true);
+    document.addEventListener("touchmove", touchHandler, true);
+    document.addEventListener("touchend", touchHandler, true);
+    document.addEventListener("touchcancel", touchHandler, true);
+}
+</script>
+<script>
+//When document is ready initialize the game.
+
+$(document).ready(function() {
+   initTouch()
+   //Can attach the game to any div
+   var myGame=$('#myDiv').countingCardGame();
+   //$('#myDiv').countingCardGame({'shufflePictures': false, 'shuffleNumbers': false, 'highCard': 12, 'lowCard': //5, 'symbolIndex': 3, 'cardColumns': 3, 'animate': false});
+   //$('#myDiv2').countingCardGame({'slotsTableColor': 'orange', 'cardColor': 'darkblue'  });
+   //Example of changing some of the defaults.
+
+ });
+
+</script>
+</head>
+<body style="cursor: auto; ">
+<div id="myDiv">
+</div>
+<!--<div id="myDiv2">
+</div> -->
+</body></html> 
